@@ -11,6 +11,14 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactFormPageComponent } from './contact-form-page/contact-form-page.component';
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +32,10 @@ import { PortfolioPageComponent } from './portfolio-page/portfolio-page.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

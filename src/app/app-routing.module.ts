@@ -6,9 +6,12 @@ import { PortfolioPageComponent } from './portfolio-page/portfolio-page.componen
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/' },
-  { path: 'contact', component: ContactFormPageComponent },
-  { path: 'about', component: AboutPageComponent },
-  { path: 'portfolio', component: PortfolioPageComponent }
+  { path: 'contact', component: ContactFormPageComponent,
+data:{animation: 'ContactPage'} },
+  { path: 'about', component: AboutPageComponent,
+  data:{animation: 'AontactPage'} },
+  { path: 'portfolio', component: PortfolioPageComponent,
+  data:{animation: 'PortfoliotPage'} }
 
 
 ];

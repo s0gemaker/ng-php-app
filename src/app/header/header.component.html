@@ -1,12 +1,20 @@
-<mat-toolbar color="primary" class="mat-elevation-z6">
-    <mat-toolbar-row>
+<mat-toolbar *ngIf="(isMobile$ | async) as mobileQuery;" color="primary" class="mat-elevation-z6">
+    <mat-toolbar-row [style.display]="mobileQuery.matches ? 'none':'flex' ">
         <a mat-button routerLink="/">
             <mat-icon> home </mat-icon>
         </a>
-        <h1>SPA Application</h1>
+        <h1 mat-button>SPA Application</h1>
         <span class="fill-space"></span>
         <a mat-button routerLink="/contact">Contact us</a>
         <a mat-button routerLink="/about">About us</a>
         <a mat-button routerLink="/portfolio">Portfolio</a>
     </mat-toolbar-row>
+    <mat-toolbar-row [style.display]="mobileQuery.matches ? 'block':'none' ">
+        <button mat-icon-button (click)="toggleMobileMenu();">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+
+
+
 </mat-toolbar>
